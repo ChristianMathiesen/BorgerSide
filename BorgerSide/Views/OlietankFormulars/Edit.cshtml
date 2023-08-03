@@ -1,0 +1,52 @@
+﻿@model BorgerSide.Models.OlietankFormular
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+&nbsp;
+
+<h4>Redigér</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Navn" class="control-label">Navn</label>
+                <input asp-for="Navn" class="form-control" />
+                <span asp-validation-for="Navn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">E-mail</label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ejer" class="control-label">Beskrivelse</label>
+                <input asp-for="Ejer" class="form-control" />
+                <span asp-validation-for="Ejer" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Forurening" class="control-label">Beskrivelse</label>
+                <input asp-for="Forurening" class="form-control" />
+                <span asp-validation-for="Forurening" class="text-danger"></span>
+            </div>
+            &nbsp;
+            <div class="form-group">
+                <input type="submit" value="Gem" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+&nbsp;
+<div>
+    <a asp-action="Index">Tilbage</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

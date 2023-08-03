@@ -11,6 +11,7 @@ namespace BorgerSide.Data
         {
         }
         public DbSet<BorgerSide.Models.BorgerTip>? BorgerTip { get; set; }
+        public DbSet<BorgerSide.Models.OlietankFormular>? OlietankFormular { get; set; }
        
     }
 }
