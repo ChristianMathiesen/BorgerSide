@@ -8,38 +8,83 @@
 
 <h4>Redigér</h4>
 <hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="Navn" class="control-label">Navn</label>
-                <input asp-for="Navn" class="form-control" />
-                <span asp-validation-for="Navn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label">E-mail</label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Ejer" class="control-label">Beskrivelse</label>
-                <input asp-for="Ejer" class="form-control" />
-                <span asp-validation-for="Ejer" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Forurening" class="control-label">Beskrivelse</label>
-                <input asp-for="Forurening" class="form-control" />
-                <span asp-validation-for="Forurening" class="text-danger"></span>
-            </div>
-            &nbsp;
-            <div class="form-group">
-                <input type="submit" value="Gem" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
+<form method="post">
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Sløjfning af olietank under 6000 liter.</h2>
+			<hr />
+		</div>
+		<div class="row">
+			<div class="col-md-6 md-3">
+				<label asp-for="Navn"></label>
+				<input asp-for="Navn" class="form-control" />
+				<span asp-validation-for="Navn" class="text-danger"></span>
+			</div>
+			<div class="col-md-6 md-3">
+				<label asp-for="Email">E-mail</label>
+				<input asp-for="Email" class="form-control" />
+				<span asp-validation-for="Email" class="text-danger"></span>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col-md-6 md-3">
+				<label asp-for="Ejer"></label>
+				<input asp-for="Ejer" class="form-control" />
+				<span asp-validation-for="Ejer" class="text-danger"></span>
+			</div>
+			<div class="col-md-6 md-3">
+				<label asp-for="Forurening">Forurening</label>
+				<input asp-for="Forurening" class="form-control" />
+				<span asp-validation-for="Forurening" class="text-danger"></span>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col-md-6 md-3">
+				<label asp-for="Ansoegning"></label>
+				<input asp-for="Ansoegning" class="form-control" />
+				<span asp-validation-for="Ansoegning" class="text-danger"></span>
+			</div>
+			<div class="col-md-6 md-3">
+				<label asp-for="Fabrikationsår">Fabrikationsår</label>
+				<input asp-for="Fabrikationsår" class="form-control" />
+				<span asp-validation-for="Forurening" class="text-danger"></span>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col-md-6 md-3">
+				<label asp-for="Registreringsnummer"></label>
+				<input asp-for="Registreringsnummer" class="form-control" />
+				<span asp-validation-for="Registreringsnummer" class="text-danger"></span>
+			</div>
+			<div class="col-md-6 md-3">
+				<label asp-for="Sloejfningsdato">Sloejfningsdato</label>
+				<input asp-for="Sloejfningsdato" class="form-control" />
+				<span asp-validation-for="Sloejfningsdato" class="text-danger"></span>
+			</div>	
+		</div>
+		<div class="row">
+			<div class="col-md-6 md-3">
+				<label asp-for="Sloejfningsmetode">Sløjfningsmetode</label>
+				<input asp-for="Sloejfningsmetode" class="form-control" />
+				<span asp-validation-for="Sloejfningsmetode" class="text-danger"></span>
+			</div>
+			<div class="col-md-6 md-3">
+				<label asp-for="Stoerrelse">Størrelse</label>
+				<input asp-for="Stoerrelse" class="form-control" />
+				<span asp-validation-for="Stoerrelse" class="text-danger"></span>
+			</div>	
+		</div>
+		<div class="col-md-6 md-3">
+			<label asp-for="Typegodkendelsesnummer">Typegodkendelsesnummer</label>
+			<input asp-for="Typegodkendelsesnummer" class="form-control" />
+			<span asp-validation-for="Typegodkendelsesnummer" class="text-danger"></span>
+		</div>	
+		<button type="submit" class="btn btn-primary" style="width:150px">Send</button>
+		<a asp-controller="OlietankFormulars" asp-action="" class="btn btn-secondary" style="width:150px">
+			Tilbage
+		</a>
+	</div>
+</form>
 &nbsp;
 <div>
     <a asp-action="Index">Tilbage</a>
