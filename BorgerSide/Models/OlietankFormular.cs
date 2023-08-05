@@ -25,7 +25,7 @@ namespace BorgerSide.Models
         public int Fabrikationsår { get; set; }
         public int Størrelse { get; set; }
         
-        //public IFormFile Prægeplade { get; set; }
+        public string Prægeplade { get; set; }
 
         [Required]
         [DataType(DataType.Date)]

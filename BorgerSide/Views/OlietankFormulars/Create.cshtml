@@ -66,11 +66,13 @@
 			</div>	
 		</div>
 		<div class="row">
-@*			<div class="col-md-6 md-3">
-				<label asp-for="Prægeplade">Sløjfningsmetode</label>
+			<div class="col-md-6 md-3">
+				<label asp-for="Prægeplade">Upload prægeplade</label>
 				<input asp-for="Prægeplade" class="form-control" />
+				<label for="pdfUpload">Upload .pdf file</label>
+				<input type="file" id="pdfUpload" name="pdfFile" accept=".pdf" />
 				<span asp-validation-for="Prægeplade" class="text-danger"></span>
-			</div>*@
+			</div>
 			<div class="col-md-6 md-3">
 				<label asp-for="Sløjfningsdato">Sløjfningsdato (dd-mm-åå)</label>
 				<input asp-for="Sløjfningsdato" class="form-control" />
