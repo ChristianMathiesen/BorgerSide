@@ -10,7 +10,8 @@
              <h2 class="text-primary">Sløjfning af olietank under 6000 liter.</h2>
         </div>
         <div>
-            <p>Her kan du se dine Olietanksformularer. &nbsp; Ønsker du at anmelde eller sløjfe en olietank, der rummer mere end 6.000 liter henvises til www.bygogmiljoe.dk.</p>
+            <p>Her kan du se dine Olietanksformularer. &nbsp; Ønsker du at anmelde eller sløjfe en olietank, der rummer mere end 6.000 liter henvises til <a href="https://www.bygogmiljoe.dk/">www.bygogmiljoe.dk</a>.</p>
+            <p>Ved sløjfning af olietank skal eventuelt restindhold i tank og rør fjernes. Du kan læse <a href="https://mst.dk/affald-jord/jordforurening/miljoeregler-for-olietanke/for-kommuner/">miljøstyrelsens vejledende udtalelse om sløjfning af olietanke under 6.000 liter.</a> Indtast alle de informationer, du har til rådighed om tanken, der skal sløjfes. Informationer om registrerede olietanke kan findes på <a href="https://www.ois.dk/default.aspx">ois.dk. </a></p>
         </div>
         <div class="col-6 text-start">
             <a asp-controller="OlietankFormulars" asp-action="Create" class="btn btn-primary">
@@ -46,7 +47,7 @@
                         @obj.Navn
                     </td>
                     <td width="20%">
-                        @obj.Email
+                        @obj.Telefonnummer
                     </td> 
                     <td width="20%">
                         @obj.Ejer

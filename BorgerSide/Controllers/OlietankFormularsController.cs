@@ -56,7 +56,7 @@ namespace BorgerSide.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Navn,Email,Ejer,Ansoegning,Registreringsnummer,Typegodkendelsesnummer,Fabrikationsår,Stoerrelse,Sloejfningsdato,Sloejfningsmetode,Forurening,CreatedDateTime")] OlietankFormular olietankFormular)
+        public async Task<IActionResult> Create([Bind("Id,Ejer,Navn,Adresse,Telefonnummer,Registreringsnummer,Typegodkendelsesnummer,Fabrikationsår,Størrelse,Sløjfningsdato,Sløjfningsmetode,Forurening,CreatedDateTime")] OlietankFormular olietankFormular)
         {
             if (ModelState.IsValid)
             {
@@ -88,7 +88,7 @@ namespace BorgerSide.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Navn,Email,Ejer,Ansoegning,Registreringsnummer,Typegodkendelsesnummer,Fabrikationsår,Stoerrelse,Sloejfningsdato,Sloejfningsmetode,Forurening,CreatedDateTime")] OlietankFormular olietankFormular)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Ejer,Navn,Adresse,Telefonnummer,Registreringsnummer,Typegodkendelsesnummer,Fabrikationsår,Størrelse,Sløjfningsdato,Sløjfningsmetode,Forurening,CreatedDateTime")] OlietankFormular olietankFormular)
         {
             if (id != olietankFormular.Id)
             {
